@@ -85,9 +85,8 @@ public class BatchConfing {
     public Job migrationJob(JobRepository jobRepository, @Qualifier("categoryStep") Step categoryStep,
             @Qualifier("itemStep") Step itemStep) {
         return new JobBuilder("job", jobRepository)
-                // .start(categoryStep)
-                .start(itemStep)
-                // .next(itemStep)
+                .start(categoryStep)
+                .next(itemStep)
                 .listener(jobListener)
                 .build();
     }
