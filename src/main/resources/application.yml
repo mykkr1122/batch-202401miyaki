@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/batch-exercise
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+error:
+  output:
+    path: csv
+    filename: error_info.csv
